@@ -1,16 +1,16 @@
 import React from "react";
 import IndiretaFilho from "./IndiretaFilho";
 
-export default (props) => {
+export default () => {
   const nomeF = "?";
   const idadeF = 0;
   const nerdF = false;
 
-  function fornecerInformacoes(nome, idade, bool) {
-    nomeF = nome;
-    idadeF = idade;
-    nerdF = bool;
-  }
+  // function fornecerInformacoes(nome, idade, bool) {
+  //   nomeF = nome;
+  //   idadeF = idade;
+  //   nerdF = bool;
+  // }
 
   return (
     <div>
@@ -23,7 +23,7 @@ export default (props) => {
           {nerdF ? "Verdadeiro" : "Falso"}
         </p>
       </div>
-      <IndiretaFilho quandoClicar={fornecerInformacoes} />
+      <IndiretaFilho />
     </div>
   );
 };
