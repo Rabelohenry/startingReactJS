@@ -14,11 +14,26 @@ import ComParametro from "./components/basicos/ComParametro";
 import Fragmento from "./components/basicos/Fragmento";
 import DiretaPai from "./components/comunicacao/DiretaPai";
 import IndiretaPai from "./components/comunicacao/IndiretaPai";
+import Input from "./components/formulario/Input";
+import Contador from "./components/contador/Contador";
+import Mega from "./components/mega/Mega";
 
 const App = () => (
   <div>
 
     <div className="Cards">
+
+      <Card titulo="Mega Sena" color="#B9006e">
+        <Mega />
+      </Card>
+
+      <Card titulo="Contador" color="#424242">
+        <Contador numeroInicial={20} />
+      </Card>
+
+      <Card titulo="Componente controlado" color="#e45f56">
+        <Input />
+      </Card>
 
       <Card titulo="Comunicação indireta" color="#8bad39">
         <IndiretaPai />

@@ -1,29 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import IndiretaFilho from "./IndiretaFilho";
 
 export default () => {
-  const nomeF = "?";
-  const idadeF = 0;
-  const nerdF = false;
+  const [nome, setNome] = useState("ze");
+  const [idade, setIdade] = useState(0);
+  const [nerd, setNerd] = useState(false);
 
-  // function fornecerInformacoes(nome, idade, bool) {
-  //   nomeF = nome;
-  //   idadeF = idade;
-  //   nerdF = bool;
-  // }
+  function fornecerInformacoes(nomeF, idadeF, bool) {
+    setNome(nomeF);
+    setIdade(idadeF);
+    setNerd(bool);
+  }
 
   return (
     <div>
       <div>
         <p>
-          {nomeF}
+          {nome}
           {" "}
-          {idadeF}
+          {idade}
           {" "}
-          {nerdF ? "Verdadeiro" : "Falso"}
+          {nerd ? "Verdadeiro" : "Falso"}
         </p>
       </div>
-      <IndiretaFilho />
+      <IndiretaFilho quandoClicar={fornecerInformacoes} />
     </div>
   );
 };
